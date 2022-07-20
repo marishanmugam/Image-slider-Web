@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #52aaca;
+}
+.carosul-container {
+    max-width:15%;
+    margin: 50px auto;
+    margin-top: 10%;
+    border: 10px solid #eab676;
+    position: relative;
+    overflow: hidden;
+    transition: 5s ease;
+
+}
+
+.carosul-container .carsoul-slider .carosul-images img {
+
+    max-width: 100%;
+    display: block;
+    animation:zoo ease 1s;
+}
+
+@keyframes zoo {
+    0% {transform: scale(12) }
+    50%{transform: scale(2)}
+    100% {transform: scale(1)}
+    
+}
+.carosul-container .carsoul-slider .carosul-images {
+    display: none;
+    position: relative;
+}
+
+.carosul-container .carsoul-slider .carosul-images.active {
+    display: block ;
+}
+
+.carosul-container .carsoul-slider .carosul-images .caption
+{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    top: 87%;
+    margin: auto;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.carosul-container .left-slide, .right-slide {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #444444;
+    border-radius: 50%;
+    font-size: 37px;
+    text-align: center;
+    color: white;
+    top: 48%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    
+}
+.carosul-container .left-slide {
+    left: 3px;
+    transition: 2s;
+}
+.carosul-container .right-slide {
+    right: 3px;
+}
